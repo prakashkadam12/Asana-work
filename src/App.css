@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* App.css */
+
+/* Keyframes for fading in elements */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 412px) {
+    .navbar ul li.item1,
+    .navbar ul li.item2,
+    .navbar ul li.item3 {
+      display: inline-block;
+    }
+
+       /* Additional styles for the "Get started" button */
+       .navbar ul li.item-start button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Change background color on hover or focus */
+    .navbar ul li.item-start button:hover,
+    .navbar ul li.item-start button:focus {
+        background-color: pink;
+    }
+
+    /* Additional styles for the option button */
+    .navbar ul li.item-option button {
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
+        padding: 8px 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Change background color on hover or focus */
+    .navbar ul li.item-option button:hover,
+    .navbar ul li.item-option button:focus {
+        background-color: black;
+        color: white;
+    }
+
+    /* Adjust styles for larger screens */
+    @media (min-width: 413px) {
+      .navbar ul li {
+        display: inline-block;
+      }
+    }
+  
+    /* Adjust font sizes for smaller screens */
+    .text-3xl {
+      font-size: 24px;
+    }
+  
+    /* Adjust layout for smaller screens */
+    .flex-row {
+      flex-direction: column;
+    }
+  
+    /* Use fadeIn keyframes to animate elements on smaller screens */
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-in-out;
+    }
+  }
+  
+  /* Adjust styles for tablets */
+  @media (max-width: 1024px) {
+    /* ... Similar adjustments for tablet screens ... */
+  }
+  
